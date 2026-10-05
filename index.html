@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rawan's Portfolio | Cybersecurity &amp; Data Science</title>
+<meta name="description" content="Rawan Almahoozi is a cybersecurity graduate from the University of Bahrain with advanced data science training, combining security practices with data analysis.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Rawan's Portfolio | Cybersecurity &amp; Data Science">
+<meta property="og:description" content="Cybersecurity graduate from the University of Bahrain with advanced training in data science. Combining security practices with data analysis to investigate vulnerabilities and build data-driven technical solutions.">
+<meta name="theme-color" content="#F3EBDD">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F3EBDD; --text:#23211E; --muted:#5A554D; --sage:#4F6449; --rule:#D8CCB6; --on-sage:#F3EBDD;
+  --serif:"Newsreader",Georgia,"Times New Roman",serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+  --bar:3.5rem;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#1C1B19;--text:#EDE6D8;--muted:#B3AB9C;--sage:#A9BDA1;--rule:#37342F;--on-sage:#1C1B19}
+}
+:root[data-theme="dark"]{--bg:#1C1B19;--text:#EDE6D8;--muted:#B3AB9C;--sage:#A9BDA1;--rule:#37342F;--on-sage:#1C1B19}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--bar) + 1rem)}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--serif);font-size:1.125rem;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:var(--text);text-decoration-color:var(--sage);text-underline-offset:.2em;text-decoration-thickness:1px;transition:color .2s,text-decoration-color .2s}
+a:hover{color:var(--sage);text-decoration-thickness:2px}
+:focus-visible{outline:2px solid var(--sage);outline-offset:3px;border-radius:2px}
+.skip{position:absolute;left:-999px;top:0;background:var(--text);color:var(--bg);padding:.6rem 1rem;z-index:100;font-family:var(--mono);font-size:.9rem}
+.skip:focus{left:0}
+
+/* Terminal bookmark index */
+.index{position:fixed;z-index:50;top:0;left:0;right:0;height:var(--bar);background:var(--bg);border-bottom:1px solid var(--rule);display:flex;align-items:center;padding:0 1rem;gap:.5rem}
+.prompt{display:none;font-family:var(--mono);font-size:.875rem;color:var(--muted);margin:0}
+.prompt b{font-weight:500;color:var(--sage)}
+.index ul{list-style:none;margin:0;padding:0;display:flex;gap:.25rem;overflow-x:auto;flex:1;scrollbar-width:none}
+.index ul::-webkit-scrollbar{display:none}
+.index li{flex:none}
+.index a{position:relative;display:block;font-family:var(--mono);font-size:.9375rem;color:var(--muted);text-decoration:none;padding:.75rem .6rem;line-height:1.2}
+.index a:hover{color:var(--text)}
+.index a[aria-current="true"]{color:var(--text)}
+.index a::before{content:"";position:absolute;top:0;left:.6rem;width:.7rem;height:0;background:var(--sage);clip-path:polygon(0 0,100% 0,100% 100%,50% 72%,0 100%);transition:height .3s ease}
+.index a[aria-current="true"]::before{height:1.1rem}
+.theme{flex:none;font-family:var(--mono);font-size:.875rem;color:var(--muted);background:none;border:1px solid var(--rule);border-radius:3px;padding:.4rem .7rem;cursor:pointer;transition:color .2s,border-color .2s}
+.theme:hover{color:var(--text);border-color:var(--sage)}
+
+main{padding:calc(var(--bar) + 2.5rem) 1.5rem 3rem;max-width:44rem;margin:0 auto}
+section{padding:3.5rem 0;border-top:1px solid var(--rule)}
+section:first-child{border-top:0;padding-top:1rem}
+h1,h2,h3{font-weight:400;margin:0;line-height:1.1}
+h1{font-size:clamp(3rem,13vw,5.75rem);letter-spacing:-.02em}
+h1 em{display:block}
+h2{font-size:clamp(1.9rem,6vw,2.4rem);margin-bottom:1.25rem}
+h3{font-family:var(--mono);font-size:.9375rem;font-weight:500;color:var(--sage);margin-bottom:.5rem}
+.role{font-family:var(--mono);font-size:.9375rem;color:var(--sage);margin:0 0 1.25rem}
+.statement{font-size:1.3rem;line-height:1.55;max-width:34rem;margin:1.75rem 0 2rem}
+.btn{display:inline-block;font-family:var(--mono);font-size:.9375rem;background:var(--sage);color:var(--on-sage);text-decoration:none;padding:.8rem 1.3rem;border-radius:2px;transition:background .2s,color .2s}
+.btn:hover{background:var(--text);color:var(--bg)}
+.finding{border-left:3px solid var(--sage);padding:.25rem 0 .25rem 1.1rem;margin:1.75rem 0 0;font-style:italic;color:var(--muted)}
+.entries{list-style:none;margin:0;padding:0}
+.entries li{display:grid;gap:.15rem;padding:.85rem 0;border-bottom:1px solid var(--rule)}
+.group{margin-top:2rem}
+.group:first-of-type{margin-top:0}
+.project{padding:2.25rem 0;border-bottom:1px solid var(--rule)}
+.project:first-of-type{padding-top:.5rem}
+.project:last-of-type{border-bottom:0}
+.kind{font-family:var(--mono);font-size:.875rem;color:var(--muted);margin:0 0 .4rem}
+.project h3{font-family:var(--serif);font-size:clamp(1.45rem,4.5vw,1.75rem);line-height:1.2;color:var(--text);margin:0 0 1rem}
+.key{border-left:3px solid var(--sage);padding:.2rem 0 .2rem 1.1rem;margin:0 0 1.1rem}
+.key span{display:block;font-family:var(--mono);font-size:.875rem;color:var(--sage);margin-bottom:.15rem}
+.key p{margin:0;font-size:1.1875rem;line-height:1.5}
+.project>p{margin:0 0 1rem}
+.tools{font-family:var(--mono);font-size:.9375rem;line-height:1.6;color:var(--muted)}
+.links{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.25rem}
+.btn-line{background:transparent;color:var(--text);border:1px solid var(--sage);padding:calc(.8rem - 1px) calc(1.3rem - 1px)}
+.btn-line:hover{background:var(--sage);color:var(--on-sage)}
+.skills-ledger dd{font-size:1.125rem;line-height:1.6}
+.ledger{margin:0}
+.ledger div{display:grid;gap:.2rem;padding:1.1rem 0;border-bottom:1px solid var(--rule)}
+.ledger dt{font-family:var(--mono);font-size:.875rem;color:var(--muted)}
+.ledger dd{margin:0;font-size:1.25rem}
+.ledger small{display:block;font-size:1.0625rem;color:var(--muted)}
+.contact-list{list-style:none;margin:0;padding:0}
+.contact-list li{display:grid;gap:.1rem;padding:.9rem 0;border-bottom:1px solid var(--rule)}
+.contact-list span{font-family:var(--mono);font-size:.875rem;color:var(--muted)}
+.contact-list a{overflow-wrap:anywhere}
+footer{max-width:44rem;margin:0 auto;padding:1.5rem 1.5rem 3rem;border-top:1px solid var(--rule);font-family:var(--mono);font-size:.875rem;color:var(--muted)}
+
+@media (min-width:640px){
+  .entries li{grid-template-columns:1fr}
+  .ledger div{grid-template-columns:9rem 1fr;gap:1.5rem}
+}
+@media (min-width:640px){.ledger.skills-ledger div{grid-template-columns:11rem 1fr}}
+@media (min-width:960px){
+  :root{--bar:0rem}
+  .index{top:0;bottom:0;right:auto;width:15.5rem;height:auto;flex-direction:column;align-items:stretch;justify-content:flex-start;border-bottom:0;border-right:1px solid var(--rule);padding:3rem 1.5rem 2rem 2.25rem;gap:1.25rem}
+  .prompt{display:block;line-height:1.7}
+  .index ul{flex-direction:column;overflow:visible;flex:none;gap:0}
+  .index a{padding:.45rem 0 .45rem 0;font-size:1rem}
+  .index a::before{left:-1.1rem;top:.3rem;width:.7rem}
+  .index a[aria-current="true"]::before{height:1.5rem}
+  .theme{align-self:flex-start;margin-top:auto}
+  main{padding:5rem 3rem 3rem 18.5rem;max-width:none;margin:0}
+  main>section{max-width:40rem}
+  footer{max-width:none;margin:0;padding:1.5rem 3rem 3rem 18.5rem}
+  html{scroll-padding-top:2rem}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#about">Skip to content</a>
+
+<header class="index">
+  <nav aria-label="Sections">
+    <ul>
+      <li><a href="#top">./home</a></li>
+      <li><a href="#about">./about</a></li>
+      <li><a href="#projects">./projects</a></li>
+      <li><a href="#skills">./skills</a></li>
+      <li><a href="#education">./education</a></li>
+      <li><a href="#contact">./contact</a></li>
+    </ul>
+  </nav>
+  <button class="theme" id="theme" type="button" aria-label="Switch colour theme">theme: light</button>
+</header>
+
+<main>
+  <section id="top" aria-labelledby="name">
+    <p class="role">Cybersecurity Graduate &amp; Data Science Specialist</p>
+    <h1 id="name">Rawan <em>Almahoozi</em></h1>
+    <p class="statement">Cybersecurity graduate from the University of Bahrain with advanced training in data science. Focused on combining security practices with data analysis to investigate vulnerabilities and build data-driven technical solutions.</p>
+    <a class="btn" href="#projects">See my projects</a>
+  </section>
+
+  <section id="about" aria-labelledby="about-h">
+    <h2 id="about-h">About</h2>
+    <p>I graduated in cybersecurity from the University of Bahrain and have since completed advanced data science training. I am passionate about bringing security practices and data-driven methods together to analyse vulnerabilities and build robust, user-centred technical solutions.</p>
+    <p class="finding">Security asks what could go wrong. Data analysis helps show where to look first.</p>
+  </section>
+
+  <section id="projects" aria-labelledby="projects-h">
+    <h2 id="projects-h">Projects</h2>
+
+    <article class="project" aria-labelledby="p1">
+      <p class="kind">Research</p>
+      <h3 id="p1">Enhancing IoT Security in Vehicles and Transportation Using Federated Learning and Blockchain</h3>
+      <div class="key"><span>Outcome</span><p>The proposed approach could improve privacy, resilience against attacks, scalability and accountability in smart transportation systems.</p></div>
+      <p>I researched security and privacy risks in smart vehicles, particularly data privacy and poisoning attacks. I then put forward a theoretical approach that combines federated learning and blockchain to keep data decentralised while improving security and trust.</p>
+      <p class="tools">Tools: Overleaf, LaTeX</p>
+      <p class="links"><a class="btn btn-line" href="https://www.overleaf.com/read/mfvbyqtvqtxv#3fc27a" target="_blank" rel="noopener">Read the paper</a></p>
+    </article>
+
+    <article class="project" aria-labelledby="p2">
+      <p class="kind">Client-server application</p>
+      <h3 id="p2">News API Client-Server Application</h3>
+      <div class="key"><span>Outcome</span><p>A working news application that serves multiple clients at once, displays news in a readable format and keeps a record of client requests.</p></div>
+      <p>Users needed an easy way to request and browse news through a client-server architecture that supports multiple connections. I built a Python application using TCP sockets, multithreading and a Tkinter interface. The server retrieves headlines and sources from NewsAPI and records client requests and activity in JSON files, while the client lets users search by keyword, category and country.</p>
+      <p class="tools">Tools: Python, TCP/IP socket programming, multithreading, Tkinter, NewsAPI, JSON, Requests library, client-server architecture</p>
+      <p class="links"><a class="btn btn-line" href="https://github.com/rawanalmahoozi/-ITNE352-Project-Group-A13" target="_blank" rel="noopener">View on GitHub</a></p>
+    </article>
+
+    <article class="project" aria-labelledby="p3">
+      <p class="kind">Web application</p>
+      <h3 id="p3">Digital Medication Tracker</h3>
+      <div class="key"><span>Outcome</span><p>Improved medication adherence and fewer missed doses.</p></div>
+      <p>Patients needed a reliable way to manage daily medication schedules, so I built a web application that tracks dosages and sends automated reminders.</p>
+      <p class="tools">Tools: Python, Streamlit, Pandas, NIH RxNorm API, OpenRouter API, CSV, LLM and AI integration, Streamlit Cloud</p>
+      <p class="links"><a class="btn btn-line" href="https://medicationtracking.streamlit.app/" target="_blank" rel="noopener">Open live app</a><a class="btn btn-line" href="https://github.com/rawanalmahoozi/Digital-Medication-Tracker" target="_blank" rel="noopener">View on GitHub</a></p>
+    </article>
+
+    <article class="project" aria-labelledby="p4">
+      <p class="kind">Data analysis</p>
+      <h3 id="p4">Chemicals in Cosmetics in the State of California</h3>
+      <div class="key"><span>Dataset</span><p>Over 112,000 records of reported chemicals, product categories, reporting dates and product discontinuation.</p></div>
+      <p>The goal was to identify patterns in chemical reporting and to examine whether chemical characteristics were associated with product discontinuation. The work covered data cleaning, exploratory data analysis and visualisation.</p>
+      <p class="tools">Tools: Python, Pandas, Jupyter Notebook, Matplotlib, Seaborn</p>
+      <p class="links"><a class="btn btn-line" href="https://github.com/rawanalmahoozi/Chemical-in-Cosmetics-in-the-state-of-California" target="_blank" rel="noopener">View on GitHub</a></p>
+    </article>
+  </section>
+
+  <section id="skills" aria-labelledby="skills-h">
+    <h2 id="skills-h">Skills</h2>
+    <dl class="ledger skills-ledger">
+      <div><dt>Programming and tools</dt><dd>Python, Java, PHP, JavaScript, HTML and CSS, Laravel, Pandas, GitHub, Software Development</dd></div>
+      <div><dt>Data science and analytics</dt><dd>Data Analysis, Pattern Recognition, Power BI Visualisation, SQL Queries, Database Management</dd></div>
+      <div><dt>Cybersecurity and systems</dt><dd>Penetration Testing, Wireshark, Burp Suite, Autopsy, Linux System, System Security, Vulnerability Analysis, Threat Analysis, Threat Intelligence</dd></div>
+      <div><dt>Soft skills</dt><dd>Analytical Thinking, Observation, Problem Solving, Teamwork, Communication, Time Management, Multitasking</dd></div>
+      <div><dt>Languages</dt><dd>Arabic (native), English (fluent), Turkish (intermediate)</dd></div>
+    </dl>
+  </section>
+
+  <section id="education" aria-labelledby="edu-h">
+    <h2 id="edu-h">Education and training</h2>
+    <dl class="ledger">
+      <div>
+        <dt>2026</dt>
+        <dd>B.S. in Cybersecurity<small>University of Bahrain</small></dd>
+      </div>
+      <div>
+        <dt>Training</dt>
+        <dd>Data Science Bootcamp</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section id="contact" aria-labelledby="contact-h">
+    <h2 id="contact-h">Contact</h2>
+    <ul class="contact-list">
+      <li><span>Email</span><a href="mailto:rawan3almahoozi@gmail.com">rawan3almahoozi@gmail.com</a></li>
+      <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/rawanalmahoozi" target="_blank" rel="noopener">linkedin.com/in/rawanalmahoozi</a></li>
+      <li><span>GitHub</span><a href="https://github.com/rawanalmahoozi" target="_blank" rel="noopener">github.com/rawanalmahoozi</a></li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; <span id="year">2026</span> Rawan Almahoozi</p>
+</footer>
+
+<script>
+(function(){
+  var root=document.documentElement;
+  var btn=document.getElementById('theme');
+  var mq=window.matchMedia('(prefers-color-scheme: dark)');
+  var saved=null;
+  try{saved=localStorage.getItem('theme');}catch(e){}
+  function current(){
+    var t=root.getAttribute('data-theme');
+    return t?t:(mq.matches?'dark':'light');
+  }
+  function apply(t){
+    root.setAttribute('data-theme',t);
+    btn.textContent='theme: '+t;
+    var meta=document.querySelector('meta[name="theme-color"]');
+    if(meta){meta.setAttribute('content',t==='dark'?'#1C1B19':'#F3EBDD');}
+  }
+  if(saved==='light'||saved==='dark'){apply(saved);}else{btn.textContent='theme: '+current();}
+  btn.addEventListener('click',function(){
+    var next=current()==='dark'?'light':'dark';
+    apply(next);
+    try{localStorage.setItem('theme',next);}catch(e){}
+  });
+
+  document.getElementById('year').textContent=new Date().getFullYear();
+
+  var links=Array.prototype.slice.call(document.querySelectorAll('.index a'));
+  var map={};
+  links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a;});
+  function setActive(id){
+    links.forEach(function(a){a.removeAttribute('aria-current');});
+    if(map[id]){
+      map[id].setAttribute('aria-current','true');
+      if(window.innerWidth<960){
+        var ul=map[id].closest('ul');
+        var target=map[id].offsetLeft-ul.clientWidth/2+map[id].offsetWidth/2;
+        ul.scrollLeft=target;
+      }
+    }
+  }
+  setActive('top');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){if(e.isIntersecting){setActive(e.target.id);}});
+    },{rootMargin:'-35% 0px -60% 0px'});
+    document.querySelectorAll('main section').forEach(function(s){io.observe(s);});
+  }
+})();
+</script>
+</body>
+</html>
